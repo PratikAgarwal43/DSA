@@ -73,25 +73,27 @@ xyyyx
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:39:14.952Z  
+**Submitted:** 2026-09-21T13:41:02.977Z  
 
 ```c_cpp
 class Solution {
 public:
-    int findMaximumPairs(const string &s) {
+    int findMaximumPairs(const string &students) {
         // write your code here 
-       
-        int n = s.size();
-        int count = 0;
-        for(int i = 0; i<n; i+=2){
-            int j = i+1;
-            if ((s[i]=='x' && s[j]=='y') || (s[i]=='y' && s[j]=='x')){
+        int n = students.size();
+        int  count = 0 ;
+        int i = 0 ;
+        while( i < n-1){
+            if(students[i]!= students[i+1]){
                 count++;
+                i+=2;
+            }else{
+                i+=1;
             }
         }
-        return count;}
-    
-    };
+        return count;
+    }
+};
 
 ```
 
