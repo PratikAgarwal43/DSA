@@ -73,15 +73,25 @@ xyyyx
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:37:10.739Z  
+**Submitted:** 2026-09-21T13:39:14.952Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
+class Solution {
+public:
+    int findMaximumPairs(const string &s) {
+        // write your code here 
+       
+        int n = s.size();
+        int count = 0;
+        for(int i = 0; i<n; i+=2){
+            int j = i+1;
+            if ((s[i]=='x' && s[j]=='y') || (s[i]=='y' && s[j]=='x')){
+                count++;
+            }
+        }
+        return count;}
     
-}
+    };
 
 ```
 
