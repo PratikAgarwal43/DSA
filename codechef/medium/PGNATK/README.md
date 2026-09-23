@@ -63,13 +63,39 @@ Chef can work on minutes $1, 2, 4, 5, 7$ to put up the net; so the answer is $7$
 
 ## Solution
 
-**Language:** Python  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:49:34.266Z  
+**Submitted:** 2026-09-23T14:59:50.770Z  
 
-```py
-# cook your dish here
+```c_cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N , K;
+        cin >> N >> K;
+        int count = 0;
+        int i = 0;
+        while(count!=N){
+            if (i%K==0){
+                i++;
+                continue;
+            }
+            i++;
+            count++;
+        }
+        cout << i -1<< '\n';
+    }
+    return 0;
+}
 
 ```
 
