@@ -11,7 +11,7 @@ int main()
     {
         int N , K;
         cin >> N >> K;
-        int count = 0;
+        int count = 1;
         int i = 0;
         while(count!=N){
             if (i%K==0){
@@ -21,7 +21,7 @@ int main()
             i++;
             count++;
         }
-        cout << i -1<< '\n';
+        cout << i<< '\n';
     }
     return 0;
 }
