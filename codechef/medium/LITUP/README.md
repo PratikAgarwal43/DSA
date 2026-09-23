@@ -76,15 +76,46 @@ $5$ is the minimum cost needed to achieve this.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T15:04:53.433Z  
+**Submitted:** 2026-09-23T15:24:10.316Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n , k ;
+        cin >> n >> k;
+        vector<int>c(n+1);
+        for(int i = 1; i <= n; i++) cin >> c[i];
+        int min_cost = INT_MAX;
+        for(int i = 1; i <=n; i++){
+            for(int j = i+1; j<=n; j++){
+                int left1 = max(1,i-k);
+                int right1 = min(n,i+k);
+                int left2 = max(1,j-k);
+                int right2 = min(n,j+k);
+                
+                if(left1 <= 1 && right2>= n && right1 >= left2- 1){
+                    min_cost = min(min_cost, c[i]+c[j]);
+                    
+                }
+            }
+        }
+        if (min_cost == INT_MAX
+        ) {
+        cout << -1 << "\n";
+    } else {
+        cout << min_cost << "\n";
+    }
+    }
+    return 0;
 }
 
 ```
