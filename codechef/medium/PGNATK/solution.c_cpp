@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N , K;
+        cin >> N >> K;
+        int count = 0;
+        int i = 0;
+        while(count!=N){
+            if (i%K==0){
+                i++;
+                continue;
+            }
+            i++;
+            count++;
+        }
+        cout << i -1<< '\n';
+    }
+    return 0;
+}
