@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        string s;
+        cin >> s;
+        int n = s.size();
+        string best = "";
+        for (int i = 0 ; i < n; i++){
+            string cand = s.substr(0,i) + s.substr(i+1);
+            int first_non_zero = 0;
+            while(first_non_zero < cand.size()- 1 && cand[first_non_zero]=='0')
+            first_non_zero++;
+            string normalize = cand.substr(first_non_zero);
+            if (best =="")
+            best = normalize;
+            else{
+                if(normalize.size() < best.size())
+                best = normalize;
+                else if (normalize.size()== best.size() && normalize < best)
+                best = normalize;
+            }
+        }
+        cout<< best << '\n';
+    }
+    return 0;
+}
