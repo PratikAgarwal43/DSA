@@ -82,7 +82,7 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T15:11:31.407Z  
+**Submitted:** 2026-09-28T15:12:29.814Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -99,7 +99,7 @@ int main() {
 	    num[i]= a;
 	    minNum = min(minNum, a);
 	}
-	int energy = 0;
+	long long energy = 0;
 	for(int i = 0 ; i < n ; i ++){
 	    energy+= num[i]-minNum;
 	}
