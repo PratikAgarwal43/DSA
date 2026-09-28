@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int c,m,w,p,r;
+	cin >> c >> m  >>  w  >>  p >>  r;
+	if (((c*m)-(w*p))>= r)
+	cout << "YES";
+	else
+	cout<<"NO";
+	return 0;
+
+}
