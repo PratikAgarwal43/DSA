@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	ios_base:: sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int  t;
+	cin >> t;
+	while(t--){
+	    int N,M,K;
+	    cin >> N >> M >> K;
+	    std::vector<int>seat(M) ;
+	    for(int i = 0 ; i <  M; i++){
+	        cin >> seat[i];
+	    }
+	    int count = 0;
+	    for (int i = 1; i<=N; i++){
+	        if(count == K) break;
+	        if (find(seat.begin(), seat.end(), i) == seat.end()){
+	            cout<< i << " ";
+	            count++;
+	        }
+	        
+	    }
+	    cout << '\n';
+	    
+	}
+    return 0;
+}
