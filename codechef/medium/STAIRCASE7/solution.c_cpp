@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	ios_base:: sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int t ;
+	while(t--){
+	    int n; 
+	    cin >> n;
+	    std::vector<int>a(n) ;
+	    unordered_map<int, int> freq;
+	    int maxFreq = INT_MIN;
+	    for(int i = 0; i< n; i++){
+	        cin >> a[i];
+	        int val = a[i] - i;
+	        freq[val]++;
+	        maxFreq = max(maxFreq, freq[val]);
+	    }
+	    cout << n - maxFreq << '\n';
+	}
+	return 0;
+
+}
