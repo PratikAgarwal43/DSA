@@ -58,7 +58,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:07:40.891Z  
+**Submitted:** 2026-09-30T15:10:23.890Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -69,6 +69,7 @@ int main() {
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	int t ;
+	cin >> t;
 	while(t--){
 	    int n; 
 	    cin >> n;
