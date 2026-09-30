@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int B,H,C;
+	cin >> B >> H >> C;
+	int ans = min((B/2), (H+C));
+	cout<< ans;
+	return 0;
+
+}
