@@ -72,7 +72,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:21:24.860Z  
+**Submitted:** 2026-10-07T15:21:43.532Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -107,32 +107,16 @@ int main()
             }
         }
         if (diff.size() % 2 == 0) {
-    cout << "YES\n";
-} else {
-    cout << "NO\n";
-}
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
     }
     return 0;
 }
 
 
 
-// If the number of mismatches is even, can we always pair them up?
-// Notice that an operation on indices i and j changes a[i] and a[j].
-// If a[i] != b[i] and a[j] != b[j], we can fix both if we choose carefully.
-
-}
-
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
-    return 0;
-}
 ```
 
 ---
