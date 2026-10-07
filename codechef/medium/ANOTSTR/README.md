@@ -72,38 +72,44 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:17:53.905Z  
+**Submitted:** 2026-10-07T15:20:59.846Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	// your code goes here
-
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        string a,b;
+        cin >> a>> b;
+        int count0_a=0, count0_b=0;
+        for(int i = 0; i< n;i ++){
+            if (a[i]=='0') count0_a++;
+            if(a[i]=='0') count0_b++;
+        }
+        if ((count0_a%2)!=(count0_b%2)){
+            cout << "NO\n";
+            return 0;
+        }
+        vector<int> diff;
+        for(int i = 0; i< n ;i++){
+            if(a[i]!= b[i]){
+                diff.push_back(i);
+            }
+        }
+    }
+    return 0;
 }
 
 
-void solve() {
-    int n;
-    cin >> n;
-    string a, b;
-    cin >> a >> b;
-
-    int count0_a = 0, count0_b = 0;
-    for (int i = 0; i < n; i++) {
-        if (a[i] == '0') count0_a++;
-        if (b[i] == '0') count0_b++;
-    }
-
-    // Parity of zeros must match
-    if ((count0_a % 2) != (count0_b % 2)) {
-        cout << "NO\n";
-        return;
-    }
-
-    // Additional check: can we achieve the exact configuration?
-    // Let's track mismatches where a[i] != b[i]
     vector<int> diff;
     for (int i = 0; i < n; i++) {
         if (a[i] != b[i]) {
