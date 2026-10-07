@@ -72,10 +72,11 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:20:59.846Z  
+**Submitted:** 2026-10-07T15:21:24.860Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -88,43 +89,38 @@ int main()
     {
         int n;
         cin >> n;
-        string a,b;
-        cin >> a>> b;
-        int count0_a=0, count0_b=0;
-        for(int i = 0; i< n;i ++){
-            if (a[i]=='0') count0_a++;
-            if(a[i]=='0') count0_b++;
+        string a, b;
+        cin >> a >> b;
+        int count0_a = 0, count0_b = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] == '0') count0_a++;
+            if (a[i] == '0') count0_b++;
         }
-        if ((count0_a%2)!=(count0_b%2)){
+        if ((count0_a % 2) != (count0_b % 2)) {
             cout << "NO\n";
             return 0;
         }
-        vector<int> diff;
-        for(int i = 0; i< n ;i++){
-            if(a[i]!= b[i]){
+        vector < int > diff;
+        for (int i = 0; i < n; i++) {
+            if (a[i] != b[i]) {
                 diff.push_back(i);
             }
         }
+        if (diff.size() % 2 == 0) {
+    cout << "YES\n";
+} else {
+    cout << "NO\n";
+}
     }
     return 0;
 }
 
 
-    vector<int> diff;
-    for (int i = 0; i < n; i++) {
-        if (a[i] != b[i]) {
-            diff.push_back(i);
-        }
-    }
 
-    // If the number of mismatches is even, can we always pair them up?
-    // Notice that an operation on indices i and j changes a[i] and a[j].
-    // If a[i] != b[i] and a[j] != b[j], we can fix both if we choose carefully.
-    if (diff.size() % 2 == 0) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
+// If the number of mismatches is even, can we always pair them up?
+// Notice that an operation on indices i and j changes a[i] and a[j].
+// If a[i] != b[i] and a[j] != b[j], we can fix both if we choose carefully.
+
 }
 
 int main() {
