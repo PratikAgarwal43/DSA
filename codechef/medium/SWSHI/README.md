@@ -76,10 +76,11 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T14:06:41.669Z  
+**Submitted:** 2026-10-12T14:08:51.508Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -90,25 +91,27 @@ int main()
     cin >> t;
     while (t--)
     {
-        int N , M;
-        vector<int> a(N);
-        for(int i = 0; i< N; i++){
+        int N, M;
+        cin >> N >> M;
+        vector < int > a(N);
+        for (int i = 0; i < N; i++) {
             cin >> a[i];
         }
         int maxLen = INT_MIN;
-        int cur= 0;
+        int cur = 0;
         int left = 0;
-        for(int i = 0; i<N; i++){
-            cur+= a[i];
-            while(cur > M){
-                cur-=a[i];
+        for (int i = 0; i < N; i++) {
+            cur += a[i];
+            while (cur > M) {
+                cur -= a[left];
+                left++;
             }
-            maxLen = max(maxLen,i-left+1);
+            maxLen = max(maxLen, i - left + 1);
         }
+        cout << maxLen << '\n';
     }
     return 0;
 }
-
 ```
 
 ---
