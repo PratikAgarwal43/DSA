@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N , M;
+        vector<int> a(N);
+        for(int i = 0; i< N; i++){
+            cin >> a[i];
+        }
+        int maxLen = INT_MIN;
+        int cur= 0;
+        int left = 0;
+        for(int i = 0; i<N; i++){
+            cur+= a[i];
+            while(cur > M){
+                cur-=a[i];
+            }
+            maxLen = max(maxLen,i-left+1);
+        }
+    }
+    return 0;
+}
