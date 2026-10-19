@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin >> n;
+	std::vector<int> vec(n) ;
+	for(int i = 0 ; i < n ; i++){
+	    cin >> vec[i];
+	}
+	unoredered_map<int,int> freq;
+	for(auto i : vec){
+	    freq[i]++;
+	    if (freq[i]==1) cout << i << " ";
+	    
+	}
+	return 0;
+
+}
