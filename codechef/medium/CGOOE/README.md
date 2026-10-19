@@ -52,10 +52,11 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:47:51.177Z  
+**Submitted:** 2026-10-19T14:49:06.169Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -66,24 +67,33 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n; 
+        int n;
         cin >> n;
-        vector<int>vec(n);
-        for(int i = 0 ; i < n ; i++){
+        vector < int > vec(n);
+        for (int i = 0; i < n; i++) {
             cin >> vec[i];
         }
-        int count =0;
-        deque<int> dq;
-        for(int i =0 ; i<n; i++){
-            while(!dq.empty() && dq.front() < i - 5){
+        int count = 0;
+        deque < int > dq;
+        for (int i = 0; i < n; i++) {
+            while (!dq.empty() && dq.front() < i - 5) {
                 dp.pop_front();
             }
-            
+            if (dq.empty()) count++;
+            else{
+                bool is_good = true;
+                for(int idx : dq){
+                    if(vec[i]>=vec[idx]){
+                        is_good = false;
+                        break;
+                    }
+                }
+            }
+
         }
     }
     return 0;
 }
-
 ```
 
 ---
