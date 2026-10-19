@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -9,18 +10,23 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n,x;
+        int n, x;
         cin >> n >> x;
-        vector<int> vec(n);
-        for(int i = 0; i< n ; i++){
-            cin >>vec[i];
+        vector < int > vec(n);
+        for (int i = 0; i < n; i++) {
+            cin >> vec[i];
         }
-        multiset<int> s;
-        vector<int> res;
-        for(int i=0; i<n ; i++){
+        multiset < int > s;
+        vector < int > res;
+        for (int i = 0; i < n; i++) {
             s.insert(vec[i]);
-            if(i>=x) s.erase(s.find(vec[i-x]));
+            if (i >= x) s.erase(s.find(vec[i - x]));
+            if (i>=x-1) res.push_back(*s.rebegin());
         }
+        for (int i = 0; i < result.size(); i++) {
+            cout << result[i] << (i == result.size() - 1 ? "" : " ");
+        }
+        cout << "\n";
     }
     return 0;
 }
