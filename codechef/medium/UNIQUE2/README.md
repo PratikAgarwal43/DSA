@@ -59,7 +59,7 @@ The distinct elements are $12$, $7$, $4$, $15$, and $9$, in the order of their f
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:41:03.571Z  
+**Submitted:** 2026-10-19T14:41:20.530Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,7 +73,7 @@ int main() {
 	for(int i = 0 ; i < n ; i++){
 	    cin >> vec[i];
 	}
-	unoredered_map<int,int> freq;
+	unordered_map<int,int> freq;
 	for(auto i : vec){
 	    freq[i]++;
 	    if (freq[i]==1) cout << i << " ";
