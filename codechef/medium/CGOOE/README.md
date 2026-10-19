@@ -52,7 +52,7 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:55:39.170Z  
+**Submitted:** 2026-10-19T14:56:58.321Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,15 +74,18 @@ int main()
             cin >> vec[i];
         }
         int count = 0;
-        for(int i = 0 ; i<n; i++){
+        for (int i = 0; i < n; i++) {
             bool is_good = true;
-            for(int j = i+1; j<n; j++){
-                if (vec[i]>=vec[j])
-                is_good = false;
-                break;
+            for (int j = i + 1; j < n; j++) {
+                if (vec[i] >= vec[j]) {
+                    is_good = false;
+                    break;
+                }
             }
+            if (is_good) count++;
         }
 
+        cout << count << '\n';
     }
     return 0;
 }
