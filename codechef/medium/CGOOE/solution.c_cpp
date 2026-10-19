@@ -23,14 +23,15 @@ int main()
                 dp.pop_front();
             }
             if (dq.empty()) count++;
-            else{
+            else {
                 bool is_good = true;
-                for(int idx : dq){
-                    if(vec[i]>=vec[idx]){
+                for (int idx: dq) {
+                    if (vec[i] >= vec[idx]) {
                         is_good = false;
                         break;
                     }
                 }
+                if (is_good) count++;
             }
 
         }
