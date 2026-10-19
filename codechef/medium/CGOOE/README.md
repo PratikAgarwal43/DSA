@@ -49,53 +49,49 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 
 ## Solution
 
-**Language:** C++  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:53:09.497Z  
+**Submitted:** 2026-10-19T14:58:16.561Z  
 
-```cpp
+```c_cpp
 #include <bits/stdc++.h>
-
 using namespace std;
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+    
     int t;
     cin >> t;
     while (t--)
     {
         int n;
         cin >> n;
-        vector < int > vec(n);
+        vector<int> vec(n);
         for (int i = 0; i < n; i++) {
             cin >> vec[i];
         }
+        
         int count = 0;
-        deque < int > dq;
         for (int i = 0; i < n; i++) {
-            while (!dq.empty() && dq.front() < i - 5) {
-                dp.pop_front();
-            }
-            if (dq.empty()) count++;
-            else {
-                bool is_good = true;
-                for (int idx: dq) {
-                    if (vec[i] >= vec[idx]) {
-                        is_good = false;
-                        break;
-                    }
+            bool is_good = true;
+            
+            int start = max(0, i - 5);
+            for (int j = start; j < i; j++) {
+                if (vec[i] >= vec[j]) {
+                    is_good = false;
+                    break;
                 }
-                if (is_good) count++;
             }
-            while(!dq.empty() && vec[dq.back()] <= vec[i]){
-                dq.pop_back();
+            if (is_good) {
+                count++;
             }
-            dq.push_back(i);
-
         }
+
+        cout << count << '\n';
     }
     return 0;
 }
