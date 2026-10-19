@@ -77,10 +77,11 @@ Note that the subarrays are traversed from left to right.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T15:07:18.071Z  
+**Submitted:** 2026-10-19T15:08:14.060Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -91,22 +92,26 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n,x;
+        int n, x;
         cin >> n >> x;
-        vector<int> vec(n);
-        for(int i = 0; i< n ; i++){
-            cin >>vec[i];
+        vector < int > vec(n);
+        for (int i = 0; i < n; i++) {
+            cin >> vec[i];
         }
-        multiset<int> s;
-        vector<int> res;
-        for(int i=0; i<n ; i++){
+        multiset < int > s;
+        vector < int > res;
+        for (int i = 0; i < n; i++) {
             s.insert(vec[i]);
-            if(i>=x) s.erase(s.find(vec[i-x]));
+            if (i >= x) s.erase(s.find(vec[i - x]));
+            if (i>=x-1) res.push_back(*s.rebegin());
         }
+        for (int i = 0; i < result.size(); i++) {
+            cout << result[i] << (i == result.size() - 1 ? "" : " ");
+        }
+        cout << "\n";
     }
     return 0;
 }
-
 ```
 
 ---
