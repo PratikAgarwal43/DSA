@@ -77,7 +77,7 @@ Note that the subarrays are traversed from left to right.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T15:08:14.060Z  
+**Submitted:** 2026-10-19T15:09:21.529Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -103,10 +103,10 @@ int main()
         for (int i = 0; i < n; i++) {
             s.insert(vec[i]);
             if (i >= x) s.erase(s.find(vec[i - x]));
-            if (i>=x-1) res.push_back(*s.rebegin());
+            if (i >= x - 1) res.push_back( * s.rbegin());
         }
-        for (int i = 0; i < result.size(); i++) {
-            cout << result[i] << (i == result.size() - 1 ? "" : " ");
+        for (int i = 0; i < res.size(); i++) {
+            cout << res[i] << " ";
         }
         cout << "\n";
     }
