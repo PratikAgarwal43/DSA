@@ -17,7 +17,7 @@ int main() {
             cout << count << "\n";
             return 0;
         }
-        else if(curr+vec[i]>s){
+        else if(s-curr<vec[i]){
             i++;
             continue;
         }
