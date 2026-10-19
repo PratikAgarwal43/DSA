@@ -1,31 +1,37 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+    
     int t;
     cin >> t;
     while (t--)
     {
         int n;
         cin >> n;
-        vector < int > vec(n);
+        vector<int> vec(n);
         for (int i = 0; i < n; i++) {
             cin >> vec[i];
         }
+        
         int count = 0;
         for (int i = 0; i < n; i++) {
             bool is_good = true;
-            for (int j = i + 1; j < n; j++) {
+            
+            int start = max(0, i - 5);
+            for (int j = start; j < i; j++) {
                 if (vec[i] >= vec[j]) {
                     is_good = false;
                     break;
                 }
             }
-            if (is_good) count++;
+            if (is_good) {
+                count++;
+            }
         }
 
         cout << count << '\n';
