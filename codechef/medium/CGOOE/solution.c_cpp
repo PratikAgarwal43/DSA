@@ -17,8 +17,15 @@ int main()
             cin >> vec[i];
         }
         int count = 0;
-       
-           
+        for(int i = 0 ; i<n; i++){
+            bool is_good = true;
+            for(int j = i+1; j<n; j++){
+                if (vec[i]>=vec[j])
+                is_good = false;
+                break;
+            }
+        }
+
     }
     return 0;
 }
