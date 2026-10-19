@@ -52,46 +52,39 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:58:16.561Z  
+**Submitted:** 2026-10-19T14:56:11.165Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
-using namespace std;
 
+using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    
     int t;
     cin >> t;
     while (t--)
     {
         int n;
         cin >> n;
-        vector<int> vec(n);
+        vector < int > vec(n);
         for (int i = 0; i < n; i++) {
             cin >> vec[i];
         }
-        
         int count = 0;
         for (int i = 0; i < n; i++) {
             bool is_good = true;
-            
-            int start = max(0, i - 5);
-            for (int j = start; j < i; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (vec[i] >= vec[j]) {
                     is_good = false;
                     break;
                 }
             }
-            if (is_good) {
-                count++;
-            }
+            if(is_good) count++;
         }
 
-        cout << count << '\n';
     }
     return 0;
 }
