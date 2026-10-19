@@ -79,24 +79,27 @@ All available denominations are even, so every total formed using them is even. 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T15:11:31.533Z  
+**Submitted:** 2026-10-19T15:12:40.531Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
-	// your code goes here
-	int n,s;
-	cin >> n >> s;
-	vector<int> vec(n);
-	for(int i =0 ;i <n ;i ++){
-	    cin >> vec[i];
-	}
-	
+    // your code goes here
+    int n, s;
+    cin >> n >> s;
+    vector < int > vec(n);
+    for (int i = 0; i < n; i++) {
+        cin >> vec[i];
+    }
+    sort(vec.rbegin(),vec.rend());
+    int count=0,i=0,curr=0;
+
+
 
 }
-
 ```
 
 ---
