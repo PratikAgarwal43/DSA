@@ -17,18 +17,28 @@ int main()
             cin >> vec[i];
         }
         int count = 0;
+        deque < int > dq;
         for (int i = 0; i < n; i++) {
-            bool is_good = true;
-            for (int j = i + 1; j < n; j++) {
-                if (vec[i] >= vec[j]) {
-                    is_good = false;
-                    break;
-                }
+            while (!dq.empty() && dq.front() < i - 5) {
+                dp.pop_front();
             }
-            if (is_good) count++;
-        }
+            if (dq.empty()) count++;
+            else {
+                bool is_good = true;
+                for (int idx: dq) {
+                    if (vec[i] >= vec[idx]) {
+                        is_good = false;
+                        break;
+                    }
+                }
+                if (is_good) count++;
+            }
+            while(!dq.empty() && vec[dq.back()] <= vec[i]){
+                dq.pop_back();
+            }
+            dq.push_back(i);
 
-cout<< cout << '\n'
+        }
     }
     return 0;
 }
