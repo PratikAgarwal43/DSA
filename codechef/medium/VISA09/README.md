@@ -79,7 +79,7 @@ All available denominations are even, so every total formed using them is even. 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T15:15:07.648Z  
+**Submitted:** 2026-10-19T15:16:51.478Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -101,7 +101,7 @@ int main() {
             cout << count << "\n";
             return 0;
         }
-        else if(curr+vec[i]>s){
+        else if(s-curr<vec[i]){
             i++;
             continue;
         }
