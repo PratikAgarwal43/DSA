@@ -53,17 +53,19 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:06:11.195Z  
+**Submitted:** 2026-10-21T15:07:21.949Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
-bool is_Valid(long long num, int d){
-    if (num == 0) return d!=0;
-    while(num > 0){
-        if(num %  10 == d) return false;
+bool is_Valid(long long num, int d) {
+    if (num == 0) return d != 0;
+    while (num > 0) {
+        if (num % 10 == d) return false;
         num /= 10;
     }
+    return true;
 }
 int main()
 {
@@ -74,10 +76,17 @@ int main()
     cin >> t;
     while (t--)
     {
+        long long n,d;
+        cin >> n >> d;
+        long long x = n;
+        while(!is_Valid(x,d)){
+            x++;
+        }
+        cout << x << "\n";
+        
     }
     return 0;
 }
-
 ```
 
 ---
