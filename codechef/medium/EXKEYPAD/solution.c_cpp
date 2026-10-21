@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool is_Valid(long long num, int d){
+    if (num == 0) return d!=0;
+    while(num > 0){
+        if(num %  10 == d) return false;
+        num /= 10;
+    }
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+    }
+    return 0;
+}
