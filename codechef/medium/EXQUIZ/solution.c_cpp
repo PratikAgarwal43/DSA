@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -11,12 +12,6 @@ int main()
     {
         int N, S;
         cin >> N >> S;
-        int count = 0;
-        int cur = 0;
-        for(int i = 0; i<N; i++){
-            if (cur<S) cur+=4;
-            else if ( cur > S) cur-=1;
-        }
-    }
+            }
     return 0;
 }
