@@ -13,13 +13,18 @@ int main()
         int N, S;
         cin >> N >> S;
         int min_attempts = INT_MAX;
-        for(int c =0; c<=N; c++){
-            int w = 4*c - S;
-            if (w>=0 && (c+w) <=N){
-                min_attempts = min(min_attempts, c+w);
+        for (int c = 0; c <= N; c++) {
+            int w = 4 * c - S;
+            if (w >= 0 && (c + w) <= N) {
+                min_attempts = min(min_attempts, c + w);
             }
         }
-        
+        if (min_attempts == INT_MAX) {
+            cout << -1 << '\n';
+        } else {
+            cout << min_attempts << '\n';
+        }
+
     }
     return 0;
 }
