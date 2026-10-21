@@ -61,10 +61,11 @@ Test case $1$: Inviting the groups with $1$ and $2$ people gives $3$ people and 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:37:45.938Z  
+**Submitted:** 2026-10-21T14:41:08.927Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -75,16 +76,22 @@ int main()
     cin >> t;
     while (t--)
     {
-        int N,M;
+        int N, M;
         cin >> N >> M;
-        std::vector<int>a(N) ;
-        for(int i = 0 ; i< N;i++){
-             cin >> a[i];
+        std::vector < int > a(N);
+        for (int i = 0; i < N; i++) {
+            cin >> a[i];
+        }
+        sort(a.begin(), a.end());
+        long long total = 0;
+        int count = 0;
+        for(int i = 0 ; i< N ; i++){
+            long long next_people = total +a[i];
+            long long handshakes = (next_people  *(next_people- 1)) /2;
         }
     }
     return 0;
 }
-
 ```
 
 ---
