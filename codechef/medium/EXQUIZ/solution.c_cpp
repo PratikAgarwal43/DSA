@@ -20,10 +20,10 @@ int main()
             }
         }
         if (min_attempts == INT_MAX) {
-            cout << -1 << '\n';
-        } else {
-            cout << min_attempts << '\n';
-        }
+        cout << -1 << '\n';
+    } else {
+        cout << min_attempts << '\n';
+    }
 
     }
     return 0;
