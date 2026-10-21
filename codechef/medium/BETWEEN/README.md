@@ -60,7 +60,7 @@ Your rival team is $1$st, and you are $2$nd, no teams between you.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:34:17.887Z  
+**Submitted:** 2026-10-21T14:35:00.930Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -70,7 +70,7 @@ int main() {
 	// your code goes here
     int X, Y;
     cin >> X  >> Y;
-    cout << Y - X - 1;
+    cout << abs(Y - X) - 1;
     return 0;
 }
 
