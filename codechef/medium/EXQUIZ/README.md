@@ -57,10 +57,11 @@ Test case $4$: Since the final score is $0$, all questions can be skipped.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:45:40.985Z  
+**Submitted:** 2026-10-21T14:48:39.973Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -73,16 +74,9 @@ int main()
     {
         int N, S;
         cin >> N >> S;
-        int count = 0;
-        int cur = 0;
-        for(int i = 0; i<N; i++){
-            if (cur<S) cur+=4;
-            else if ( cur > S) cur-=1;
-        }
-    }
+            }
     return 0;
 }
-
 ```
 
 ---
