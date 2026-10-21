@@ -57,7 +57,7 @@ Test case $4$: Since the final score is $0$, all questions can be skipped.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:50:35.665Z  
+**Submitted:** 2026-10-21T14:50:28.811Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -82,10 +82,10 @@ int main()
             }
         }
         if (min_attempts == INT_MAX) {
-            cout << -1 << '\n';
-        } else {
-            cout << min_attempts << '\n';
-        }
+        cout << -1 << '\n';
+    } else {
+        cout << min_attempts << '\n';
+    }
 
     }
     return 0;
