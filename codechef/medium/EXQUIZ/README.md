@@ -57,7 +57,7 @@ Test case $4$: Since the final score is $0$, all questions can be skipped.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:50:06.962Z  
+**Submitted:** 2026-10-21T14:50:35.665Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,13 +75,18 @@ int main()
         int N, S;
         cin >> N >> S;
         int min_attempts = INT_MAX;
-        for(int c =0; c<=N; c++){
-            int w = 4*c - S;
-            if (w>=0 && (c+w) <=N){
-                min_attempts = min(min_attempts, c+w);
+        for (int c = 0; c <= N; c++) {
+            int w = 4 * c - S;
+            if (w >= 0 && (c + w) <= N) {
+                min_attempts = min(min_attempts, c + w);
             }
         }
-        
+        if (min_attempts == INT_MAX) {
+            cout << -1 << '\n';
+        } else {
+            cout << min_attempts << '\n';
+        }
+
     }
     return 0;
 }
