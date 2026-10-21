@@ -61,7 +61,7 @@ Test case $1$: Inviting the groups with $1$ and $2$ people gives $3$ people and 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:36:44.932Z  
+**Submitted:** 2026-10-21T14:37:45.938Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,6 +75,12 @@ int main()
     cin >> t;
     while (t--)
     {
+        int N,M;
+        cin >> N >> M;
+        std::vector<int>a(N) ;
+        for(int i = 0 ; i< N;i++){
+             cin >> a[i];
+        }
     }
     return 0;
 }
