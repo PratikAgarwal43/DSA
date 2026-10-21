@@ -61,7 +61,7 @@ Test case $1$: Inviting the groups with $1$ and $2$ people gives $3$ people and 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:41:08.927Z  
+**Submitted:** 2026-10-21T14:42:12.166Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,10 +85,15 @@ int main()
         sort(a.begin(), a.end());
         long long total = 0;
         int count = 0;
-        for(int i = 0 ; i< N ; i++){
-            long long next_people = total +a[i];
-            long long handshakes = (next_people  *(next_people- 1)) /2;
+        for (int i = 0; i < N; i++) {
+            long long next_people = total + a[i];
+            long long handshakes = (next_people * (next_people - 1)) / 2;
+            if (handshakes <= M) {
+                total = next_people;
+                count++;
+            }else break;
         }
+        cout << count << '\n';
     }
     return 0;
 }
