@@ -53,18 +53,19 @@ Test case $1$: $14 = 1 + 2 + 4 + 7$ uses $K = 4$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:20:05.803Z  
+**Submitted:** 2026-10-21T15:20:23.805Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
-bool check(long long K, long long N){
+bool check(long long K, long long N) {
     int sum = 0;
-    for(long long i=1;i<=K; K++){
-        int term = 1 + (int)(i-1) * i/2;
+    for (long long i = 1; i <= K; K++) {
+        int term = 1 + (int)(i - 1) * i / 2;
         sum += term;
-        if(sum > N) return false;
+        if (sum > N) return false;
     }
     return sum <= N;
 }
@@ -78,14 +79,24 @@ int main()
     while (t--)
     {
         long long N;
-    cin >> N;
+        cin >> N;
+
+        long long low = 1, high = 2e6;
+        long long ans = 1;
+        while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, N)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
     
-    long long low = 1, high = 2e6; 
-    long long ans = 1;
+    cout << ans << "\n";
     }
     return 0;
 }
-
 ```
 
 ---
