@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
+
 using namespace std;
-bool is_Valid(long long num, int d){
-    if (num == 0) return d!=0;
-    while(num > 0){
-        if(num %  10 == d) return false;
+bool is_Valid(long long num, int d) {
+    if (num == 0) return d != 0;
+    while (num > 0) {
+        if (num % 10 == d) return false;
         num /= 10;
     }
+    return true;
 }
 int main()
 {
@@ -16,6 +18,14 @@ int main()
     cin >> t;
     while (t--)
     {
+        long long n,d;
+        cin >> n >> d;
+        long long x = n;
+        while(!is_Valid(x,d)){
+            x++;
+        }
+        cout << x << "\n";
+        
     }
     return 0;
 }
