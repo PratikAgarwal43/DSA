@@ -9,6 +9,12 @@ int main()
     cin >> t;
     while (t--)
     {
+        int N,M;
+        cin >> N >> M;
+        std::vector<int>a(N) ;
+        for(int i = 0 ; i< N;i++){
+             cin >> a[i];
+        }
     }
     return 0;
 }
