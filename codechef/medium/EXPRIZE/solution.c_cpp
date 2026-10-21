@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long K, long long N){
+    int sum = 0;
+    for(long long i=1;i<=K; K++){
+        int term = 1 + (int)(i-1) * i/2;
+        sum += term;
+        if(sum > N) return false;
+    }
+    return sum <= N;
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long long N;
+    cin >> N;
+    
+    long long low = 1, high = 2e6; 
+    long long ans = 1;
+    }
+    return 0;
+}
