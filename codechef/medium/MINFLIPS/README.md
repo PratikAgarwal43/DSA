@@ -64,10 +64,11 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T14:10:40.492Z  
+**Submitted:** 2026-10-26T14:11:27.886Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -80,22 +81,22 @@ int main()
     {
         int n;
         cin >> n;
-        vector<int> num(n);
-        for(int i =0; i<n; i++){
+        vector < int > num(n);
+        for (int i = 0; i < n; i++) {
             cin >> num[i];
         }
-        if (n%2==1) cout<< -1<< '\n';
+        if (n % 2 == 1) cout << -1 << '\n';
         else {
-            int count_1=0, count_neq_1=0;
-            for (auto i : num){
-                if(i==1) count_1++;
+            int count_1 = 0, count_neq_1 = 0;
+            for (auto i: num) {
+                if (i == 1) count_1++;
                 else count_neq_1++;
             }
+            cout << abs(count_neq_1 - count_1)/2 << '\n';
         }
     }
     return 0;
 }
-
 ```
 
 ---
