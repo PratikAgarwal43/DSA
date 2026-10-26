@@ -63,10 +63,11 @@ To achieve a sum of 2, there are two ways:
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T14:19:33.378Z  
+**Submitted:** 2026-10-26T14:21:54.782Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
@@ -75,11 +76,19 @@ int main()
     cout.tie(nullptr);
     int t;
     cin >> t;
-    if (s==1) {cout<< 1<<"\n";
-    return 0;}
+    if (t == 1) {
+        cout << 1 << "\n";
+        return 0;
+    }
+    std::vector<long long>dp(t+1,0) ;
+    dp[0]= 1;
+    dp[1]= 1;
+    for(int i =2; i<=t; i++){
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+    cout << dp[t] << '\n';
     return 0;
 }
-
 ```
 
 ---
