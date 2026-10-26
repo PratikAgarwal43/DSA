@@ -16,7 +16,7 @@ def decode_message(s):
             char = s[i]
             original_char = mirror_oz[char]
             decoded.append(original_char)
-            i += 2  
+            i += 2  # Skip both the character and the '#'
         else:
             char = s[i]
             original_char = mirror_an[char]
@@ -25,5 +25,3 @@ def decode_message(s):
             
     return "".join(decoded)
 
-encoded_str = input().strip()
-print(decode_message(encoded_str))
