@@ -70,10 +70,11 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:53:57.124Z  
+**Submitted:** 2026-10-28T14:54:15.681Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main()
@@ -81,7 +82,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    
+
     int t;
     cin >> t;
     while (t--)
@@ -90,19 +91,18 @@ int main()
         cin >> n >> k;
         string s;
         cin >> s;
-        
+
         int alarms = 0;
         int i = 0;
-        
+
         while (i < n) {
-            // Find the first uncovered dangerous room
+
             if (s[i] == '1') {
                 alarms++;
-                // Place the alarm as far right as possible to maximize coverage to the left and right.
-                // An alarm placed at index 'i + k' (capped at n - 1) covers everything up to that point.
+
                 int alarm_pos = min(n - 1, i + k);
-                
-                // Move 'i' past all the rooms covered by this alarm
+
+
                 i = alarm_pos + 1;
             } else {
                 i++;
