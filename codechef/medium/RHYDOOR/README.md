@@ -66,7 +66,7 @@ BBBBAAAAABBBBBBB
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:38:17.018Z  
+**Submitted:** 2026-10-28T14:42:24.212Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -84,6 +84,23 @@ int main()
         cin >> n;
         string s;
         cin >> s;
+        int door_opened = 0;
+        int streak = 0;
+        char prev_char = '\0';
+        for(int i = 0; i<n; i++){
+            if (s[i]==prev_char){
+                streak++;
+            }else{
+                prev_char = s[i];
+                streak =1;
+            }
+            if (streak == 3){
+                door_opened++;
+                streak = 0;
+                prev_char = '\0';
+            }
+        }
+        cout << door_opened << '\n';
     }
     return 0;
 }
