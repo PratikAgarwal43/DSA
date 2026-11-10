@@ -38,8 +38,8 @@ Output: [[],[0]]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 9.7 MB (beats 98.95%)  
-**Submitted:** 2026-11-05T13:23:33.511Z  
+**Memory:** 9.8 MB (beats 92.22%)  
+**Submitted:** 2026-11-10T05:58:59.103Z  
 
 ```cpp
 class Solution {
