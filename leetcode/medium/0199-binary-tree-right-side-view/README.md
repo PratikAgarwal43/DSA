@@ -46,9 +46,9 @@ Given the `root` of a binary tree, imagine yourself standing on the  **right sid
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 15 MB (beats 57.46%)  
-**Submitted:** 2026-11-11T13:23:48.090Z  
+**Runtime:** 1 ms (beats 17.26%)  
+**Memory:** 14.8 MB (beats 93.81%)  
+**Submitted:** 2026-11-11T13:24:34.385Z  
 
 ```cpp
 /**
