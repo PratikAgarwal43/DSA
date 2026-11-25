@@ -60,14 +60,27 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-25T14:53:03.954Z  
+**Submitted:** 2026-11-25T14:59:43.072Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int t ;
+	cin >> t;
+	
+	while(t--){
+	    int n,k;
+	    cin >> n >> k;
+	    if (k>n or k<((n+1)/2)) cout<< "NO\n";
+	    else cout << "YES\n";
+	    
+	}
+	return 0;
 
 }
 
