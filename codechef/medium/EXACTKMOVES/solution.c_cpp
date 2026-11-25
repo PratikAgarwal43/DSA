@@ -2,6 +2,19 @@
 using namespace std;
 
 int main() {
-	// your code goes here
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int t ;
+	cin >> t;
+	
+	while(t--){
+	    int n,k;
+	    cin >> n >> k;
+	    if (k>n or k<((n+1)/2)) cout<< "NO\n";
+	    else cout << "YES\n";
+	    
+	}
+	return 0;
 
 }
