@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    long long t;
+    cin >> t;
+    while(t--){
+        long long n, m;
+        cin >> n >> m;
+        long long r, c;
+        cin >> r >> c;
+        long long minROW = min(n-r,r-1);
+        long long minCol = min(m-c, c-1);
+        long long diagonal = max(minROW, minCol);
+        long long minhorizontal  = (2*(n-1)) + ( m-1);
+        long long minvertically = (n-1) + (2*(m-1));
+        long long minMoves = min (minvertically, minhorizontal);
+        cout<< diagonal + minMoves << '\n';
+    }
+
+}
