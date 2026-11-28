@@ -57,27 +57,32 @@ row 2: 01
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 8 MB (beats 11.23%)  
-**Submitted:** 2026-11-28T08:38:32.765Z  
+**Submitted:** 2026-11-28T08:43:01.261Z  
 
 ```cpp
 class Solution {
 public:
+    void helper(int left, int right, int& cur, int i, int n, int k) {
+        if (i > n)
+            return;
+        int mid = left + (right - left) / 2;
+        if (k <= mid)
+            right = mid;
+        else
+            left = mid + 1;
+        if (k > mid) {
+            if (cur == 0)
+                cur = 1;
+            else
+                cur = 0;
+        }
+        helper(left, right, cur, i+1,n,k);
+    }
     int kthGrammar(int n, int k) {
         int left = 1, right = pow(2, n - 1);
         int cur = 0;
-        for (int i = 1; i <= n; i++) {
-            int mid = left + (right - left) / 2;
-            if (k <= mid)
-                right = mid;
-            else
-                left = mid+1;
-            if (k > mid) {
-                if (cur == 0)
-                    cur = 1;
-                else
-                    cur = 0;
-            }
-        }
+        helper(left, right, cur, 1, n, k);
+
         return cur;
     }
 };
